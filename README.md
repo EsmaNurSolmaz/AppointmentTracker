@@ -1,8 +1,8 @@
 <p float="left">
-  <img src="./screenshots/ss-0 - c.png" alt="Image 1" width="250" />
-  <img src="./screenshots/ss-1 - c.png" alt="Image 1" width="250" />
-  <img src="./screenshots/ss-2 - c.png" alt="Image 1" width="250" />
-  <img src="./screenshots/ss-3 - c.png" alt="Image 1" width="250" />
+  <img src="./screenshots/ss-1.png" alt="Image 1" width="250" />
+  <img src="./screenshots/ss-2.png" alt="Image 1" width="250" />
+  <img src="./screenshots/ss-3.png" alt="Image 1" width="250" />
+  <img src="./screenshots/ss-4.png" alt="Image 1" width="250" />
 </p>
 ------------------------------------------------------------------------
 
