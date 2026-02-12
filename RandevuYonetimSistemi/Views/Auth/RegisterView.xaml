@@ -1,0 +1,88 @@
+<Page x:Class="RandevuYonetimSistemi.Views.Auth.RegisterView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:vm="clr-namespace:RandevuYonetimSistemi.ViewModels.AuthVM"
+      mc:Ignorable="d"
+      Title="Register">
+
+    <Page.DataContext>
+        <vm:RegisterViewModel />
+    </Page.DataContext>
+
+    <Grid Background="#F3F4F6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="453*"/>
+            <ColumnDefinition Width="347*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              MinWidth="400"
+              MaxWidth="900"
+              Grid.ColumnSpan="2">
+
+            <Border Background="White"
+                    CornerRadius="15"
+                    Padding="80"
+                    Width="600"
+                    MinWidth="500"
+                    Margin="0,-40,0,0">
+
+                <StackPanel>
+
+                    <TextBlock Text="Create Account"
+                               FontSize="24"
+                               FontWeight="Bold"
+                               Foreground="#2C3E50"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,25"/>
+
+                    <TextBlock Text="Full Name" FontWeight="Bold"/>
+                    <TextBox Height="40"
+                             Margin="0,4,0,10"
+                             Text="{Binding FullName}"/>
+
+                    <TextBlock Text="Username" FontWeight="Bold"/>
+                    <TextBox Height="40"
+                             Margin="0,4,0,10"
+                             Text="{Binding Username}"/>
+
+                    <TextBlock Text="Email" FontWeight="Bold"/>
+                    <TextBox Height="40"
+                             Margin="0,4,0,10"
+                             Text="{Binding Email}"/>
+
+                    <TextBlock Text="Phone Number" FontWeight="Bold"/>
+                    <TextBox Height="40"
+                             Margin="0,4,0,10"
+                             Text="{Binding PhoneNum}"/>
+
+                    <TextBlock Text="Password" FontWeight="Bold"/>
+                    <PasswordBox x:Name="PasswordBox"
+                                 Height="40"
+                                 Margin="0,4,0,15"
+                                 PasswordChanged="PasswordBox_PasswordChanged"/>
+
+                    <Button Content="Register"
+                            Height="38"
+                            Margin="0,20,0,0"
+                            Background="#2E86DE"
+                            Foreground="White"
+                            FontWeight="Bold"
+                            Command="{Binding RegisterCommand}"/>
+
+                    <TextBlock Text="{Binding Message}"
+                               Foreground="{Binding MessageColor}"
+                               TextAlignment="Center"
+                               FontWeight="SemiBold"
+                               Margin="0,15,0,0"
+                               TextWrapping="Wrap"/>
+
+                </StackPanel>
+
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

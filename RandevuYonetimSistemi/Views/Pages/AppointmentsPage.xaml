@@ -1,0 +1,86 @@
+﻿<Page x:Class="RandevuYonetimSistemi.Views.Pages.AppointmentsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:RandevuYonetimSistemi.Views.Components"
+      Background="White"
+      Loaded="Page_Loaded">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+            <RadioButton x:Name="CalendarToggle"
+                         Content="Calendar"
+                         Margin="10"
+                         FontSize="16"
+                         IsChecked="True"
+                         Checked="ViewToggle_Checked"/>
+
+            <RadioButton x:Name="ListToggle"
+                         Content="List"
+                         Margin="10"
+                         FontSize="16"
+                         Checked="ViewToggle_Checked"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+
+            <local:CalendarView x:Name="CalendarComponent"
+                                Visibility="Visible"
+                                AppointmentSelected="OnAppointmentSelected"/>
+
+            <local:ListView x:Name="ListComponent"
+                            Visibility="Collapsed"
+                            AppointmentSelected="OnAppointmentSelected"/>
+
+            <Border x:Name="DetailOverlay"
+                    Background="#80000000"
+                    Visibility="Collapsed"
+                    MouseDown="DetailOverlay_MouseDown">
+
+                <Border Width="450"
+                        Background="White"
+                        CornerRadius="12"
+                        Padding="20"
+                        VerticalAlignment="Center"
+                        MouseDown="DetailPopup_MouseDown">
+
+                    <local:AppointmentDetailComponent x:Name="DetailComponent"/>
+                </Border>
+            </Border>
+        </Grid>
+
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+            <Button Content="Add New Customer"
+                    Width="180"
+                    Height="40"
+                    Background="#1E90FF"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    Margin="10,0"
+                    Click="NewCustomer_Click"/>
+
+            <Button Content="Add New Appointment"
+                    Width="180"
+                    Height="40"
+                    Background="#32CD32"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    Margin="10,0"
+                    Click="NewAppointment_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Page>
