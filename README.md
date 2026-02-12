@@ -1,19 +1,17 @@
+<p float="left">
+  <img src="./screenshots/ss-0 - c.png" alt="Image 1" width="250" />
+  <img src="./screenshots/ss-1 - c.png" alt="Image 1" width="250" />
+  <img src="./screenshots/ss-2 - c.png" alt="Image 1" width="250" />
+  <img src="./screenshots/ss-3 - c.png" alt="Image 1" width="250" />
+</p>
+------------------------------------------------------------------------
+
 # 📅 Appointment Tracker
 
 A modern desktop-based Appointment Management System built with .NET 8.\
 This application helps users efficiently create, manage, and track
 appointments in a structured and user-friendly way.
 
-------------------------------------------------------------------------
-
-## 🖼️ Screenshots
-
-![Screenshot](screenshots/ss-0 - c.png)
-![Screenshot](screenshots/ss-1 - c.png)
-![Screenshot](screenshots/ss-2 - c.png)
-![Screenshot](screenshots/ss-3 - c.png)
-
-------------------------------------------------------------------------
 
 ## 🚀 Overview
 
